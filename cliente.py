@@ -53,7 +53,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
         # Recive si la opcion no es valida
         data = client_socket.recv(buffer_size).decode('utf-8')  # Resive dificultad
         # Mientras el mensaje no sea una opcion no valida
-        while data == 'Opcion no valida, inserta "F" para facil y "D" para dificil' or not (dificultad == "end" or dificultad == "") :
+        while data == 'Opcion no valida, inserta "F" para facil y "D" para dificil\nPara salir pon "end"':
             print(data, end = "\n\n")
             dificultad = input()
             client_socket.sendall(dificultad.encode('utf-8'))

@@ -79,7 +79,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:   # El 
             else :
                 num_casillas = 216
 
-            client_conn.sendall(b'Mapa creado\nPara seleccionar una casilla inserta Fila,Columna\n Ejemplo: 6,9')
+            client_conn.sendall(b'Mapa creado\nPara seleccionar una casilla inserta Fila,Columna\nEjemplo: 6,9')
             casillas_abiertas = 0
             perder = False
 
